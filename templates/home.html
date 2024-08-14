@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="homepage">
+    <!-- Main Title -->
+    <header class="main-title">
+        <h1>ArqSocial</h1>
+        <h2>Explorando Dados de Forma Interativa</h2>
+    </header>
+    
+    <!-- Introduction Section -->
+    <section class="intro">
+        <p>Bem-vindo ao ArqSocial, um projeto inovador para a visualização de dados interativos.</p>
+        <p>Aqui, você pode explorar diferentes tipos de gráficos e dashboards criados com tecnologia avançada para transformar dados em insights valiosos.</p>
+        
+        <!-- Placeholder for Image -->
+        <img src="{{ url_for('static', filename='imgs/placeholder.jpg') }}" alt="Visualização de Dados" class="intro-image">
+    </section>
+    
+    <!-- Call-to-Action Section -->
+    <section class="cta">
+        <h3>Comece a Explorar</h3>
+        <p>Confira nossa seção de Dashboards para ver os gráficos em ação e aproveite para experimentar as interações que temos a oferecer!</p>
+        <a href="{{ url_for('dashs') }}" class="cta-button">Ir para Dashboards</a>
+    </section>
+</div>
+
+<!-- Optional: Add some custom CSS styling -->
+<style>
+.homepage {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main-title h1 {
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+
+.main-title h2 {
+    font-size: 1.5em;
+    color: #666;
+}
+
+.intro {
+    margin: 20px 0;
+}
+
+.intro p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.intro-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    max-height: 400px; /* Ajuste a altura máxima da imagem conforme necessário */
+}
+
+.cta {
+    margin-top: 30px;
+}
+
+.cta h3 {
+    font-size: 1.8em;
+}
+
+.cta p {
+    font-size: 1.1em;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+</style>
+{% endblock %}
